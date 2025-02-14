@@ -1,0 +1,287 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0A0F2C; /* Azul oscuro moderno */
+    color: #E0E0E0; /* Gris claro para el texto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #FFD700; /* Oro de Boca */
+}
+
+a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FFC400; /* Oro más claro */
+}
+
+/* Header */
+header {
+    background-color: #001489; /* Azul de Boca */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #FFD700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+header .logo {
+    max-width: 90px;
+    height: auto;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5)); /* Efecto de brillo */
+}
+
+/* Contenedor principal */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Sección de agenda */
+.agenda {
+    margin-bottom: 40px;
+}
+
+.agenda h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.event {
+    background-color: rgba(255, 215, 0, 0.05); /* Fondo oro con transparencia */
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Acordeones */
+.accordion {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background-color: rgba(0, 20, 137, 0.8); /* Azul con transparencia */
+    color: #FFD700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    position: relative;
+    padding-right: 40px;
+    border-radius: 12px;
+}
+
+.accordion::after {
+    content: "▼";
+    font-size: 14px;
+    color: #FFD700;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.accordion.active::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.accordion:hover {
+    background-color: rgba(0, 38, 168, 0.8); /* Azul más claro */
+}
+
+.panel {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: rgba(0, 20, 137, 0.9);
+    border-radius: 0 0 12px 12px;
+}
+
+.panel .sub-events {
+    padding: 10px 0;
+}
+
+.video-link {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: rgba(255, 215, 0, 0.1);
+    color: #FFD700;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.video-link:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+}
+
+/* Sección de canales */
+.canales {
+    margin-bottom: 40px;
+}
+
+.canales h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-input {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    border-radius: 8px;
+    background-color: rgba(0, 20, 137, 0.8);
+    color: #FFD700;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #FFD700;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 215, 0, 0.7);
+}
+
+.channels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.channel {
+    background-color: rgba(255, 215, 0, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.channel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.channel-logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .channels-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .accordion {
+        font-size: 16px;
+    }
+}
+.event:hover, .channel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+a, .accordion, .video-link {
+    transition: all 0.3s ease;
+}
+#video-container {
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    overflow: hidden;
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+}
+/* Estilos para el logo del torneo */
+.torneo-logo {
+    width: 50px; /* Tamaño del logo */
+    height: auto;
+    margin-left: 10px; /* Espacio entre el texto y el logo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Contenedor de la información del evento */
+.event-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+/* Alineación del contenido del acordeón */
+.accordion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye el espacio entre el texto y el logo */
+    padding: 15px;
+    text-align: left;
+    background-color: rgba(0, 20, 137, 0.8); /* Azul con transparencia */
+    color: #FFD700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    position: relative;
+    border-radius: 12px;
+}
+
+.accordion h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.accordion p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: rgba(255, 215, 0, 0.8);
+}
