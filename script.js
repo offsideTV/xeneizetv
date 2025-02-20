@@ -41,3 +41,17 @@ function searchChannels() {
 
 // Escuchar el evento de entrada en el campo de búsqueda
 document.getElementById('searchInput').addEventListener('input', searchChannels);
+// Script para mostrar/ocultar el texto de DMCA
+document.getElementById('dmcaButton').addEventListener('click', function() {
+    var dmcaText = document.getElementById('dmcaText');
+    if (dmcaText.style.display === 'none' || dmcaText.style.display === '') {
+        dmcaText.style.display = 'block';
+    } else {
+        dmcaText.style.display = 'none';
+    }
+});
+
+// Agrega un evento al botón DMCA para desplazar la página
+document.getElementById('dmcaButton').addEventListener('click', function() {
+    document.getElementById('dmcaText').scrollIntoView({ behavior: 'smooth' });
+});
