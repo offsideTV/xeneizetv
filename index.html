@@ -22,18 +22,18 @@
         <a href="index.html">
             <img src="https://raw.githubusercontent.com/OffsideTV/logosweb/main/escudopes.webp" alt="XeneizeTV Logo" class="logo">
         </a>
+        <button id="donateButton" class="donate-button">Dejar una donación</button>
     </header>
     
     <div class="container">
         <!-- Sección de la agenda -->
     <section class="agenda">
-    <h2>Próximo partido</h2>
+    <h2>¡Hoy juega Boca!</h2>
     <div class="event">
         <button class="accordion">
-            
             <div class="event-info">
                 <h3>Torneo Betano Apertura</h3>
-                <p>22/02 - 19:30 - Boca Juniors Vs. Aldosivi</p>
+                <p>19:30 - Boca Juniors Vs. Aldosivi</p>
             </div>
             <img src="https://raw.githubusercontent.com/OffsideTV/logosweb/main/torneobetano.webp" alt="Logo Copa Libertadores" class="torneo-logo">
         </button>
@@ -41,7 +41,8 @@
             <div class="sub-events">
                 <a href="reproductor.html?ch=tntsportsop1" class="video-link" target="_blank">TNT Sports opción 1</a>
                 <a href="reproductor.html?ch=tntsportsop2" class="video-link" target="_blank">TNT Sports opción 2</a>
-                <a href="reproductor.html?ch=tntsportsop3" class="video-link" target="_blank">TNT Sports opción 3</a>             
+                <a href="reproductor.html?ch=tntsportsop3" class="video-link" target="_blank">TNT Sports opción 3</a> 
+                <a href="reproductor.html?ch=tntsportsop4" class="video-link" target="_blank">TNT Sports opción 4</a>           
             </div>
         </div>
     </div>
@@ -176,6 +177,13 @@
             <h2>Contacto</h2>
             <p><strong>Correo electrónico:</strong> <a href="mailto:xeneizetv1905@gmail.com">xeneizetv1905@gmail.com</a></p>
         </div>
+    </div>
+
+    <div class="donation-banner" id="donationBanner">
+        <span class="donation-icon">🙏</span>
+        <span>¿Querés apoyar nuestro proyecto? <strong>Hacé una donación aquí:</strong></span>
+        <button onclick="window.open('https://link.mercadopago.com.ar/offsidetv', '_blank')">Donar ahora</button>
+        <button class="close-btn" onclick="closeBanner()">✖</button>
     </div>
     <script src="script.js"></script>
 </body>
