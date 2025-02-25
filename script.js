@@ -57,7 +57,7 @@ document.getElementById('dmcaButton').addEventListener('click', function() {
 });
 
 document.getElementById('donateButton').addEventListener('click', function() {
-    window.open('donaciones.html', '_blank');
+    window.location.href='donaciones.html';
 });
 
 function closeBanner() {
@@ -65,3 +65,11 @@ function closeBanner() {
     
 }
 
+document.getElementById('proximospartidos').addEventListener('click', function() {
+    window.location.href = 'partidos.html'; // Cambia a la misma pestaña
+});
+
+
+document.getElementById('homeButton').addEventListener('click', function() {
+    window.location.href = 'index.html'; // Redirige a la página de inicio
+});
