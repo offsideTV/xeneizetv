@@ -7,12 +7,23 @@
     <link rel="stylesheet" href="styless.css">
     <link rel="icon" href="https://raw.githubusercontent.com/OffsideTV/logosweb/main/escudopes.webp" type="image/webp">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNFNVKBHZ8"></script>
+    <script>
+     window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NNFNVKBHZ8');
+</script>
 </head>
 <body>
     <header>
         <a href="index.html">
             <img src="https://raw.githubusercontent.com/OffsideTV/logosweb/main/escudopes.webp" alt="XeneizeTV Logo" class="logo">
         </a>
+        
+        <button id="homeButton" class="donate-button">Canales y Agenda</button>
         <button id="donateButton" class="donate-button">Dejar una donación</button>
     </header>
     
@@ -49,6 +60,7 @@
                 "fox1op1": "https://streamtp3.com/global1.php?stream=fox1ar",
                 "fox1op2": "https://streamdz3.lat/player/embed.php?channel=foxar",
                 "fox1op3": "https://la12hd.com/vivo/canal.php?stream=foxsports",
+                
 
                 "fox2op1": "https://streamtp3.com/global1.php?stream=fox2ar",
                 "fox2op2": "https://streamdz3.lat/player/embed.php?channel=fox2ar",
@@ -77,15 +89,15 @@
                 "disney6": "https://streamdz4.lat/player/embed.php?channel=disney6",
                 "disney7": "https://streamdz4.lat/player/embed.php?channel=disney7",
                 "disney8": "https://streamdz4.lat/player/embed.php?channel=disney8",
+                "disney11": "https://streamdz4.lat/player/embed.php?channel=disney11",
 
-                "espnco": "https://streamdz4.lat/player/embed.php?channel=espn",
-                "espnmx2": "https://streamdz4.lat/player/embed.php?channel=espnmx2",
-                "bein": "https://streamdz4.lat/player/embed.php?channel=beinsportsn",
-                "sportv1": "https://streamdz4.lat/player/embed.php?channel=sportv1",
-
+                "espnbr": "https://streamdz4.lat/player/embed.php?channel=espnbr",
+                "espn2": "https://streamtp3.com/global1.php?stream=espn2",
+              
                 //disney streamtp3
                 "disney7op2": "https://streamtp3.com/global1.php?stream=disney7",
-                "disneybr": "https://streamtp3.com/global1.php?stream=disneybr",
+                "disney17op2": "https://streamtp3.com/global1.php?stream=disney17",
+                
                  
 
             };
@@ -136,7 +148,14 @@
 
         
         document.getElementById('donateButton').addEventListener('click', function() {
-    window.open('donaciones.html', '_blank');
+    window.location.href='donaciones.html';
+});
+
+document.getElementById('homeButton').addEventListener('click', function() {
+    window.location.href = 'index.html'; // Redirige a la página de inicio
+});
+document.getElementById('proximospartidos').addEventListener('click', function() {
+    window.location.href = 'partidos.html'; // Cambia a la misma pestaña
 });
     </script>
 </body>
