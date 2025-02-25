@@ -531,3 +531,10 @@ a, .accordion, .video-link {
         margin-bottom: 10px; /* Añadir margen inferior al logo */
     }
 }
+.secure-donation {
+    font-size: 16px;
+    color: #d9dae0; /* Verde para transmitir confianza */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
